@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    display: grid;
+    place-items: center;
+    background: #f7f7f7
+}
+
+.card {
+    color: #fff;
+    width: 350px;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #96021a, #d6730f);
+    border: none
+}
+
+.neo-button {
+    width: 40px;
+    height: 40px;
+    outline: 0 !important;
+    cursor: pointer;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    margin-right: 10px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #3b3a33, #3b3a33);
+    box-shadow: inset 20px 20px 60px #3b3a33, inset -20px -20px 60px #3b3a33
+}
+
+.num {
+    color: #eee !important
+}
+
+.line {
+    color: #fff
+}
+
+.neo-button:active {
+    border-radius: 50%;
+    background: #3b3a33;
+    box-shadow: 28px 28px 57px #3b3a33, -28px -28px 57px #3b3a33
+}
+
+
+.profile_button {
+    color: #fff;
+    padding: 10px;
+    border: none;
+    outline: 0 !important;
+    border-radius: 50px;
+    background: #3b3a33;
+ 
+}
+
+.meupost{
+    .card {
+        width: 400px;
+        border: none;
+        border-radius: 10px;
+        background-color: ##737874
+    }
+    
+    .stats {
+        background: #737874 !important;
+        color: #000 !important
+    }
+    
+    .articles {
+        font-size: 10px;
+        color: #a1aab9
+    }
+    
+    .number1 {
+        font-weight: 500
+    }
+    
+    .followers {
+        font-size: 10px;
+        color: #a1aab9
+    }
+    
+    .number2 {
+        font-weight: 500
+    }
+    
+    .rating {
+        font-size: 10px;
+        color: #a1aab9
+    }
+    
+    .number3 {
+        font-weight: 500
+    }
+    
+}
+
+.meuposte {
+    background: #f2f5f8 !important
+}
+
+.contato{
+
+    body {
+        background: #eee
+    }
+    
+    .card {
+        border: none;
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        cursor: pointer
+    }
+    
+    .card:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        background-color: #E1BEE7;
+        transform: scaleY(1);
+        transition: all 0.5s;
+        transform-origin: bottom
+    }
+    
+    .card:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        background-color: #8E24AA;
+        transform: scaleY(0);
+        transition: all 0.5s;
+        transform-origin: bottom
+    }
+    
+    .card:hover::after {
+        transform: scaleY(1)
+    }
+    
+    .fonts {
+        font-size: 11px
+    }
+    
+
+    
+    .buttons button:nth-child(1) {
+        border: 1px solid #8E24AA !important;
+        color: #8E24AA;
+        height: 40px
+    }
+    
+    .buttons button:nth-child(1):hover {
+        border: 1px solid #8E24AA !important;
+        color: #fff;
+        height: 40px;
+        background-color: #8E24AA
+    }
+    
+    .buttons button:nth-child(2) {
+        border: 1px solid #8E24AA !important;
+        background-color: #8E24AA;
+        color: #fff;
+        height: 40px
+    }
+}
+.social-list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0
+}
+
+.social-list li {
+    padding: 10px;
+    color: #8E24AA;
+    font-size: 19px
+}
