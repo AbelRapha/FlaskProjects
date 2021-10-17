@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{%block body%}
+    <div class="container d-flex justify-content-center">
+        <div class="card p-3 py-4">
+            <div class="text-center"> <img src="{{foto_perfil}}" width="100" class="rounded-circle">
+                <h3 class="mt-2">{{current_user.username}}</h3> <span class="mt-1 clearfix">{{current_user.email}}</span>
+                <div class="row mt-3 mb-3">
+                    <div class="col-md-6">
+                        <span class="rating">Posts</span> <span class="number">{{current_user.contar_posts()}}</span>
+                    </div>
+                    <div class="col-md-4">
+                        {%if 'Não' in current_user.area_de_atuacao %}
+                            <span class="articles">Stacks</span> <span class="number1">0</span>
+                        {%else%}
+                            <span class="articles">Stacks</span> <span class="number1">{{ current_user.area_de_atuacao.count(';') + 1}}</span>
+                        {%endif%}
+                    </div>
+                </div>
+                <div class="profile mt-5">
+                     <a href="{{url_for('editar_perfil')}}">
+                        <button class="profile_button px-5">Editar Perfil</button> 
+                     </a>
+                </div>
+                <div style="text-align: center;" class="mt-2">
+                <strong>Stacks</strong>
+                </div>
+                {%for stack in current_user.area_de_atuacao.split(';')%}
+                    <button type = 'button' class="btn btn-light mt-2" disabled> 
+                    {{stack}}
+                    </button>
+                {%endfor%}
+            </div>
+        </div>
+    </div>
+<div class="md-2"></div>     
+{% block form_editar_perfil %}
+{%endblock%}    
+{%endblock%}
